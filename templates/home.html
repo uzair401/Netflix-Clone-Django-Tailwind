@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="hero min-h-screen" style="background-image: url('{% static 'images/home.jpg' %}');">
+    <div class="hero-overlay bg-black bg-opacity-80"></div> <!-- Changed bg-opacity to 80 and added bg-black for darker shade -->
+    <div class="hero-content text-neutral-content text-center">
+        <div class="max-w-2xl mx-auto"> <!-- Increased max-width for larger div -->
+
+            <h1 class="flex items-center text-5xl font-extrabold dark:text-white">Unlimited movies, TV shows, and more
+            </h1>
+            <h6 class="text-lg font-bold dark:text-white mt-4">Starts at Rs 250. Cancel anytime.</h6> <!-- Added margin-top for spacing -->
+
+            <p class="mb-6 mt-4 text-center text-white dark:text-white">Ready to watch? Enter your email to create or restart your membership.
+            </p> <!-- Adjusted margin-bottom and margin-top for spacing -->
+
+            <form class="max-w-lg mx-auto"> <!-- Increased max-width for larger form -->
+                <div class="mb-5">
+                    <input type="email" id="email" class="bg-gray-800 border border-gray-300 text-gray-900 text-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email address" required style="width: 100%; height: 50px;" /> <!-- Darker background for email input -->
+                </div>
+                <div class="flex justify-center mb-5 mt-8"> <!-- Centered button and added margin-top for spacing -->
+                    <button type="submit" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-500 font-medium rounded-sm text-lg w-full sm:w-auto px-8 py-4 text-center dark:bg-red-750 dark:hover:bg-red-700 dark:focus:ring-red-800">Get Started > </button> <!-- Increased button size -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
