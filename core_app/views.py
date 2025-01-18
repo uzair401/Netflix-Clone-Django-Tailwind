@@ -5,7 +5,7 @@ def home(request):
     return render(request, 'home.html')
 
 def movies(request):
-    return HttpResponse("Movies Page")
+    return render (request, 'movies.html')
 
 def tv_shows(request):
     return HttpResponse("TV Shows Page")
